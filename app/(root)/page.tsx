@@ -36,11 +36,9 @@ import Link from 'next/link'
         images={images?.data}
         totalPages={images?.totalPage}
         page={page}
-
          />
     </section>
     </>
-
   )
 }
 
