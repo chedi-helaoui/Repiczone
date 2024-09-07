@@ -13,8 +13,7 @@ const populateUser = (query: any) => query.populate({
   model: User,
   select: '_id firstName lastName clerkId'
 })
-
-// Add Image
+{/*Add Image */}
 export async function addImage({image, userId, path}:AddImageParams){
     try {
         await connectToDatabase();
@@ -38,7 +37,7 @@ export async function addImage({image, userId, path}:AddImageParams){
     }
 }
 
-// Update Image
+{/* Update Image */}
 export async function updateImage({image, userId, path}:UpdateImageParams){
     try {
         await connectToDatabase();
@@ -63,7 +62,7 @@ export async function updateImage({image, userId, path}:UpdateImageParams){
     }
 }
 
-// Delete Image
+{/* Delete Image */}
 export async function deleteImage(imageId : string){
     try {
         await connectToDatabase();
@@ -76,7 +75,7 @@ export async function deleteImage(imageId : string){
     }
 }
 
-// Get Image
+{/* Get Image */}
 export async function getImageById(imageId:string){
     try {
         await connectToDatabase();
@@ -91,7 +90,7 @@ export async function getImageById(imageId:string){
     }
 }
 
-// Get Images
+{/* Get Images*/}
 export async function getAllImages({limit=9, page=1, searchQuery=''}: {
     limit?:number,
     page?:number,
@@ -143,7 +142,7 @@ export async function getAllImages({limit=9, page=1, searchQuery=''}: {
         
     }
 }
-// GET IMAGES BY USER
+{/* GET IMAGES BY USER */} 
 export async function getUserImages({
   limit = 9,
   page = 1,
