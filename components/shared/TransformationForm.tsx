@@ -49,13 +49,13 @@ export const TransformationForm = ({action,data=null,userId,type,creditBalance,c
       } : defaultValues
       const router = useRouter();
 
-// 1. Define your form.
+    {/*  Define your form */}
     const form = useForm<z.infer<typeof formSchema>>({
       resolver: zodResolver(formSchema),
       defaultValues: initialValues
     })
    
-    // 2. Define a submit handler.
+    {/* Define a submit handler */}
     async function onSubmit(values: z.infer<typeof formSchema>) {
       setIsSubmitting(true);
       if (data || image){
@@ -139,7 +139,7 @@ export const TransformationForm = ({action,data=null,userId,type,creditBalance,c
         }, 1000)();
         return onChangeField(value);
     }
-    // TODO: update creditFee to something else
+    {/* TODO: update creditFee to something else */}
     const onTransformHandler = async () =>{
       setIsTransforming(true);
       setTransformationConfig(

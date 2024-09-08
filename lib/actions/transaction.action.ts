@@ -42,7 +42,7 @@ export async function createTransaction(transaction: CreateTransactionParams) {
     try {
       await connectToDatabase();
   
-      // Create a new transaction with a buyerId
+      {/* Create a new transaction with a buyerId */}
       const newTransaction = await Transaction.create({
         ...transaction, buyer: transaction.buyerId
       })

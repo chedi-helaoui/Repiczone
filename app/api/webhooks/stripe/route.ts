@@ -17,10 +17,10 @@ export async function POST(request: Request) {
     return NextResponse.json({ message: "Webhook error", error: err });
   }
 
-  // Get the ID and type
+  {/* Get the ID and type */}
   const eventType = event.type;
 
-  // CREATE
+  {/* CREATE */}
   if (eventType === "checkout.session.completed") {
     const { id, amount_total, metadata } = event.data.object;
 
